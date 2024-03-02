@@ -8,7 +8,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/tadeupinheiro/ImportacaoDeEstoque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/tadeupinheiro/ImportacaoDeEstoque.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/tadeupinheiro/Tecido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/tadeupinheiro/Tecido.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/planilha.xlsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/planilhanova.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/planilhanova.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/planilhanova1.xlsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,8 +92,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/dev/tadeupinheiro/ImportacaoDeEstoque.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="1" />
+          <line>67</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

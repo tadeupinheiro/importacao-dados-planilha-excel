@@ -8,7 +8,11 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.math.BigDecimal;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
@@ -47,12 +51,24 @@ public class ImportacaoDeEstoque {
                             tecido.setMetragem(cell.getNumericCellValue());
                             break;
                         case 5:
-                            tecido.setQualidade((int) cell.getNumericCellValue());
+                            tecido.setLargura(cell.getNumericCellValue());
                             break;
                         case 6:
-                            tecido.setNotafiscal((int) cell.getNumericCellValue());
+                            tecido.setQualidade((int) cell.getNumericCellValue());
                             break;
                         case 7:
+                            tecido.setPrecoCusto(BigDecimal.valueOf(cell.getNumericCellValue()));
+                            break;
+                        case 8:
+                            tecido.setNumeroPedido((int) cell.getNumericCellValue());
+                            break;
+                        case 9:
+                            tecido.setNotafiscal((int) cell.getNumericCellValue());
+                            break;
+                        case 10:
+                            tecido.setDataNota(conversaoData(cell.getStringCellValue()));
+                            break;
+                        case 11:
                             tecido.setEmpresa(cell.getStringCellValue());
                             break;
                     }
@@ -62,8 +78,18 @@ public class ImportacaoDeEstoque {
         } catch (FileNotFoundException e){
             e.printStackTrace();
             System.out.println("Arquivo excel não encontrado!");
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
         }
 
         return tecidos;
+    }
+
+    public Date conversaoData (String dataRecebida) throws ParseException {
+
+        SimpleDateFormat formatoPadrao = new SimpleDateFormat("dd/MM/yyyy");
+        Date dataFormatada = formatoPadrao.parse(dataRecebida);
+
+        return dataFormatada;
     }
 }

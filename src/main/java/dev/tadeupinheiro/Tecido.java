@@ -1,6 +1,8 @@
 package dev.tadeupinheiro;
 
 import java.math.BigDecimal;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Tecido {
 
@@ -15,7 +17,7 @@ public class Tecido {
 
     private int numeroPedido;
     private int notafiscal;
-    private String dataNota;
+    private Date dataNota;
     private String empresa;
 
     public String getArtigo() {
@@ -106,24 +108,37 @@ public class Tecido {
         this.numeroPedido = numeroPedido;
     }
 
-    public String getDataNota() {
+    public Date getDataNota() {
         return dataNota;
     }
 
-    public void setDataNota(String dataNota) {
+    public void setDataNota(Date dataNota) {
         this.dataNota = dataNota;
+    }
+
+    public String dataFormatada (Date dataNota){
+        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yy");
+        String data = formato.format(dataNota);
+
+        return data;
     }
 
     @Override
     public String toString() {
+
         return "Tecido{" +
-                "artigo='" + artigo + '\'' +
-                ", acabamento='" + acabamento + '\'' +
-                ", cor='" + cor + '\'' +
-                ", metragem=" + metragem +
-                ", qualidade=" + qualidade +
-                ", notafiscal=" + notafiscal +
-                ", empresa='" + empresa + '\'' +
+                "codigoRolo= " + codigoRolo +
+                ", artigo=' " + artigo + '\'' +
+                ", acabamento=' " + acabamento + '\'' +
+                ", cor=' " + cor + '\'' +
+                ", metragem= " + metragem +
+                ", largura= " + largura +
+                ", qualidade= " + qualidade +
+                ", precoCusto= R$" + precoCusto +
+                ", numeroPedido= " + numeroPedido +
+                ", notafiscal= " + notafiscal +
+                ", dataNota=' " + dataFormatada(dataNota) + '\'' +
+                ", empresa=' " + empresa + '\'' +
                 '}';
     }
 }
