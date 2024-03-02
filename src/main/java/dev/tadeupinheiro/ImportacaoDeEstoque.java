@@ -18,7 +18,7 @@ public class ImportacaoDeEstoque {
         List<Tecido> tecidos = new ArrayList<>();
 
         try {
-            FileInputStream fisPlanilha = new FileInputStream("C:\\Projetos\\novo-teste-excel\\src\\main\\resources\\planilhanova.xlsx");
+            FileInputStream fisPlanilha = new FileInputStream("C:\\Projetos\\importacao-dados-planilha-excel\\src\\main\\resources\\planilhanova.xlsx");
             XSSFWorkbook workbook = new XSSFWorkbook(fisPlanilha);
             XSSFSheet sheet = workbook.getSheetAt(0);
             Iterator<Row> rowIterator = sheet.iterator();
@@ -32,24 +32,27 @@ public class ImportacaoDeEstoque {
                     Cell cell = cellIterator.next();
                     switch (cell.getColumnIndex()) {
                         case 0:
-                            tecido.setArtigo(cell.getStringCellValue());
+                            tecido.setCodigoRolo((int)cell.getNumericCellValue());
                             break;
                         case 1:
-                            tecido.setAcabamento(cell.getStringCellValue());
+                            tecido.setArtigo(cell.getStringCellValue());
                             break;
                         case 2:
-                            tecido.setCor(cell.getStringCellValue());
+                            tecido.setAcabamento(cell.getStringCellValue());
                             break;
                         case 3:
-                            tecido.setMetragem(cell.getNumericCellValue());
+                            tecido.setCor(cell.getStringCellValue());
                             break;
                         case 4:
-                            tecido.setQualidade((int) cell.getNumericCellValue());
+                            tecido.setMetragem(cell.getNumericCellValue());
                             break;
                         case 5:
-                            tecido.setNotafiscal((int) cell.getNumericCellValue());
+                            tecido.setQualidade((int) cell.getNumericCellValue());
                             break;
                         case 6:
+                            tecido.setNotafiscal((int) cell.getNumericCellValue());
+                            break;
+                        case 7:
                             tecido.setEmpresa(cell.getStringCellValue());
                             break;
                     }

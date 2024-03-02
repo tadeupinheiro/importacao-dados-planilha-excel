@@ -1,13 +1,21 @@
 package dev.tadeupinheiro;
 
+import java.math.BigDecimal;
+
 public class Tecido {
 
+    private int codigoRolo;
     private String artigo;
     private String acabamento;
     private String cor;
     private double metragem;
+    private double largura;
     private int qualidade;
+    private BigDecimal precoCusto;
+
+    private int numeroPedido;
     private int notafiscal;
+    private String dataNota;
     private String empresa;
 
     public String getArtigo() {
@@ -64,6 +72,46 @@ public class Tecido {
 
     public void setEmpresa(String empresa) {
         this.empresa = empresa;
+    }
+
+    public int getCodigoRolo() {
+        return codigoRolo;
+    }
+
+    public void setCodigoRolo(int codigoRolo) {
+        this.codigoRolo = codigoRolo;
+    }
+
+    public double getLargura() {
+        return largura;
+    }
+
+    public void setLargura(double largura) {
+        this.largura = largura;
+    }
+
+    public BigDecimal getPrecoCusto() {
+        return precoCusto;
+    }
+
+    public void setPrecoCusto(BigDecimal precoCusto) {
+        this.precoCusto = precoCusto;
+    }
+
+    public int getNumeroPedido() {
+        return numeroPedido;
+    }
+
+    public void setNumeroPedido(int numeroPedido) {
+        this.numeroPedido = numeroPedido;
+    }
+
+    public String getDataNota() {
+        return dataNota;
+    }
+
+    public void setDataNota(String dataNota) {
+        this.dataNota = dataNota;
     }
 
     @Override

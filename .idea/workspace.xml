@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30808f0a-cb6f-4bc1-ba9a-6cf2fa390cc7" name="Changes" comment="" />
+    <list default="true" id="30808f0a-cb6f-4bc1-ba9a-6cf2fa390cc7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/tadeupinheiro/ImportacaoDeEstoque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/tadeupinheiro/ImportacaoDeEstoque.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/tadeupinheiro/Tecido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/tadeupinheiro/Tecido.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/planilhanova.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/planilhanova.xlsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -79,5 +84,16 @@
       <updated>1706140303230</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/dev/tadeupinheiro/ImportacaoDeEstoque.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
